@@ -145,7 +145,9 @@ int __cdecl main()
             else {
                 cout << recvbuf << endl;
                 if (v[1] != "") {
-                    cout << v[1] << endl;
+                    if (v[1] == "NOTICE") {
+                        cout << msg.substr(msg.find(" ", msg.find(" ", msg.find(" ") + 1) + 1) + 1) << endl;
+                    }
                 }
             }
         }
